@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Webpage</title>
+    <title>DevCat Studio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -13,19 +13,27 @@
             padding: 0;
             box-sizing: border-box;
         }
-        body {
+        html, body {
+            height: 100%;
             font-family: 'Poppins', sans-serif;
             background-color: #f4f4f4;
             color: #333;
-            text-align: center;
         }
-        
+
+        /* Make sure the page takes full height */
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
         /* Header */
         header {
-            background: #007bff;
+            background: #ec760e;
             color: white;
             padding: 20px 0;
             font-size: 22px;
+            text-align: center;
         }
         .nav {
             display: flex;
@@ -44,17 +52,23 @@
         }
 
         /* Main Content */
+        .content {
+            flex: 1; /* Pushes the footer to the bottom */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
         .container {
             background: white;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            display: inline-block;
             max-width: 600px;
-            margin: 40px auto;
+            text-align: center;
         }
         h1 {
-            color: #007bff;
+            color: #ec760e;
             margin-bottom: 10px;
         }
         p {
@@ -64,7 +78,7 @@
             display: inline-block;
             margin-top: 20px;
             padding: 12px 24px;
-            background: #007bff;
+            background: #ec760e;
             color: white;
             text-decoration: none;
             border-radius: 5px;
@@ -72,20 +86,20 @@
             transition: 0.3s;
         }
         .file-link:hover {
-            background: #0056b3;
+            background: #b85c0c;
         }
         .icon {
             font-size: 50px;
-            color: #007bff;
+            color: #ec760e;
             margin-bottom: 15px;
         }
 
-        /* Footer */
+        /* Footer (Sticks to Bottom) */
         footer {
             background: #333;
             color: white;
+            text-align: center;
             padding: 20px;
-            margin-top: 40px;
         }
         .social-icons {
             margin-top: 10px;
@@ -97,41 +111,47 @@
             transition: 0.3s;
         }
         .social-icons a:hover {
-            color: #007bff;
+            color: #ec760e;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <i class="fas fa-globe"></i> My Webpage
-        <div class="nav">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </div>
-    </header>
+    <div class="wrapper">
 
-    <!-- Main Content -->
-    <div class="container">
-        <i class="fas fa-laptop-code icon"></i>
-        <h1>Welcome to My Webpage!</h1>
-        <p>This is a simple webpage hosted on GitHub Pages.</p>
-        <a class="file-link" href="file.txt">
-            <i class="fas fa-file-alt"></i> View My Text File
-        </a>
+        <!-- Header -->
+        <header>
+            <i class="fas fa-globe"></i> DevCat Studio
+            <div class="nav">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="content">
+            <div class="container">
+                <i class="fas fa-laptop-code icon"></i>
+                <h1>Welcome to DevCat Studio!</h1>
+                <p>This is a simple webpage hosted on GitHub Pages.</p>
+                <a class="file-link" href="file.txt">
+                    <i class="fas fa-file-alt"></i> View My Text File
+                </a>
+            </div>
+        </div>
+
+        <!-- Footer (Now Sticks to Bottom) -->
+        <footer>
+            <p>© 2025 DevCat Studio. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+
     </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2024 My Webpage. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-        </div>
-    </footer>
 
 </body>
 </html>
